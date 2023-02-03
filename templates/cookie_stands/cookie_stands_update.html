@@ -1,0 +1,12 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+    <h1>Update Cookie Stand</h1>
+    <form method="POST">
+        <div class="mb-6">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SAVE">
+        </div>
+    </form>
+{% endblock content %}

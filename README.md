@@ -1,3 +1,24 @@
+### Notes
+
+* Django `environ` allows you to read environment variables.
+* Add `.env` file in the `project` folder and add all of `.env.sample` except `ALLOW_ALL_ORIGINS`.
+* Run `python -c "import secrets; print(secrets.token_urlsafe())"` and add to `SECRET_KEY` in `.env` file.
+* Run `makemigrations` and `migrate` inside VENV
+* Create superuser inside VENV
+* Start `cookie_stands` app, add to `APPS` in `settings.py`, and register in app's `admin.py`.
+* Get stuff from Elephant
+* Run `pip install psycopg2-binary` and `pip freeze`
+* Delete `0001_initial.py` migrations in the `things` app in `migrations` directory.
+* Run  `migrate` inside VENV because of the new database.
+* Create new `superuser` for Elephant
+* Remove Things from the database by unregistering `things` app my commenting out in the `things` app's `admin.py` file.
+* Add `urls.py`, `serializers.py`, `permissions.py` `urls_front.py`, and `views_front.py` files in `cookie_stands` directory.
+* In project's `urls.py` file replace `things` path with `path("api/v1/cookie_stands/", include("cookie_stands.urls")),` and `path("cookie_stands/", include("cookie_stands.urls_front")),`.
+* Update `cookie_stand` app's `urls.py`, `view.py`, and `serializer.py` files using data from `things` app.
+* Update base.html file and replace `thing` with `cookie_stand` for the List and Create options.
+* Create a `cookie_stands` directory in `templates` and add HTML files for each item in the app's `views_front.py` file.
+
+
 # api-quick-start
 
 Template Project for starting up CRUD API with Django Rest Framework

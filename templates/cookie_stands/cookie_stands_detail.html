@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <h2>Details about {{ cookie_stand.location }}</h2>
+        <p>Owner: {{ cookie_stand.owner }}</p>
+        <p>Description: {{ cookie_stand.description }}</p>
+        <p>Hourly Sales: {{ cookie_stand.hourly_sales }}</p>
+        <p>Minimum Customers/Hour: {{ cookie_stand.minimum_customers_per_hour }}</p>
+        <p>Maximum Customers/Hour: {{ cookie_stand.maximum_customers_per_hour }}</p>
+        <p>Average Cookies/Sale: {{ cookie_stand.average_cookies_per_sale }}</p>
+        <a href="{% url 'cookie_stand_update' cookie_stand.pk %}">+ Update</a>
+        <a href="{% url 'cookie_stand_delete' cookie_stand.pk %}">- Delete</a>
+    </div>
+{% endblock content%}
